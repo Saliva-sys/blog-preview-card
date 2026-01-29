@@ -22,16 +22,16 @@ body {
     font-family: 'Figtree', sans-serif;
     background-color: var(--Yellow);
     /* Nastavenie 12-stĺpcového gridu */
-    background-image: repeating-linear-gradient(
+    /*background-image: repeating-linear-gradient(
         to right,
-        rgb(124, 124, 124, 0.05), /* Farba stĺpca */
-        rgba(124, 124, 124, 0.05) 72px, /* Šírka stĺpca je 72px */
-        transparent 72px, /* Tu začína medzera */
-        transparent 104px /* Koniec medzery (72+32) */
-    );    
+        rgb(124, 124, 124, 0.05),*/ /* Farba stĺpca */
+        /*rgba(124, 124, 124, 0.05) 72px,*/ /* Šírka stĺpca je 72px */
+        /*transparent 72px,*/ /* Tu začína medzera */
+        /*transparent 104px*/ /* Koniec medzery (72+32) */
+    /*);    
     background-position: center;
     background-repeat: repeat-y;    
-    background-size: 1248px 100%; /* 12 stĺpcov po 104px = 1248px */
+    background-size: 1248px 100%;*/ /* 12 stĺpcov po 104px = 1248px */
     /* Koniec nastavenia 12-stĺpcového gridu */
     
 }
@@ -47,7 +47,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Vycentruje obsah karty dolava*/
-    gap: 1.5rem;
+    gap: 1.5rem;    
 }
 
 .card img {
@@ -79,6 +79,7 @@ body {
     font-weight: 800;
     font-size: 1.5rem;
     line-height: 1.5;
+    margin: 0;
 }
 
 .content h1:hover {
@@ -98,6 +99,7 @@ body {
     justify-content: flex-start; /* Zarovná autora pod text k ľavému okraju */
     align-items: center; /* Vycentruje ich vertikálne na stred */
     gap: 0.75rem; /* Medzera medzi fotkou a menom */
+    margin: 0;
 }
 
 .author img{
@@ -134,7 +136,8 @@ body {
     /* Prispôsobenie obrázka, aby sa nezdeformoval */
     .blog-image img {
         width: 100%;
-        height: auto;
+        height: 200px;
+        object-fit: cover;    /* Zabezpečí, že sa obrázok pri zmene pomeru nezdeformuje */
     }
 
     .content h1 {
