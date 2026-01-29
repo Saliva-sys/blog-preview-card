@@ -1,0 +1,148 @@
+:root {
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 42%);
+    --dark-gray: hsl(0, 0%, 7%);
+    --blue: hsl(228, 45%, 44%);
+    --black: hsl(0, 0%, 0%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* Horizontálne centrovanie */
+    align-items: center; /* Vertikálne centrovanie */
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column; /* Ak chceš mať pätku pod kartou */
+    gap: 2rem; /* Medzera medzi kartou a pätkou */
+    font-family: 'Figtree', sans-serif;
+    background-color: var(--Yellow);
+    /* Nastavenie 12-stĺpcového gridu */
+    background-image: repeating-linear-gradient(
+        to right,
+        rgb(124, 124, 124, 0.05), /* Farba stĺpca */
+        rgba(124, 124, 124, 0.05) 72px, /* Šírka stĺpca je 72px */
+        transparent 72px, /* Tu začína medzera */
+        transparent 104px /* Koniec medzery (72+32) */
+    );    
+    background-position: center;
+    background-repeat: repeat-y;    
+    background-size: 1248px 100%; /* 12 stĺpcov po 104px = 1248px */
+    /* Koniec nastavenia 12-stĺpcového gridu */
+    
+}
+
+.card {
+    width: 100%;
+    max-width: 384px; /*Ak karta zaberá presne 4 stĺpce, jej šírka v CSS by mala byť: (4×72)+(3×32)=384px*/
+    background-color: var(--White);
+    border: 1px solid var(--dark-gray);
+    border-radius: 1.25rem; /* Zaoblenie  */
+    box-shadow: 8px 8px 0px 0px var(--black); /*8px doprava, 8px dole, 0 rozmazanie, tmavo siva farba */
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Vycentruje obsah karty dolava*/
+    gap: 1.5rem;
+}
+
+.card img {
+    border-radius: 1.25rem; /* Zaoblenie  */
+}
+
+.category {
+    width: auto;
+    font-weight: 800; 
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--dark-gray);
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--Yellow);
+    border-radius: 0.25rem;
+    align-items: center;
+}
+
+.publish-date {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--dark-gray);
+}
+
+.content h1 {
+    color: var(--dark-gray);
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.content h1:hover {
+    color: var(--Yellow);
+    cursor: pointer; /* Zmení kurzor na "ručičku", aby používateľ vedel, že na to môže kliknúť */
+}
+
+.description {
+    color: var(--light-gray);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.author {
+    display: flex; /* Toto dá fotku a meno vedľa seba */
+    justify-content: flex-start; /* Zarovná autora pod text k ľavému okraju */
+    align-items: center; /* Vycentruje ich vertikálne na stred */
+    gap: 0.75rem; /* Medzera medzi fotkou a menom */
+}
+
+.author img{
+    width: 2rem; /* Fixná šírka avataru */
+    height: 2rem;
+    border-radius: 50%;    /* Ak má byť fotka autora gulička */
+}
+
+.author span {
+    color: var(--dark-gray);
+    font-weight: 800;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.attribution { 
+    font-size: 0.6875rem; 
+    text-align: center; 
+    margin-block-start: 0.9375rem;
+}
+
+.attribution a { 
+    color: var(--blue);
+}
+
+/* Mobile Styles (375px and below) */
+@media (max-width: 24rem) {
+    .card {
+        width: calc(100% - 48px); /* Karta bude mať šírku displeja mínus malé okraje po bokoch (24px + 24x) */
+        margin: 0 auto; /* Toto kartu vycentruje vodorovne */
+        padding: 1.5rem; /* Na mobile môže byť padding o niečo menší */
+    }   
+
+    /* Prispôsobenie obrázka, aby sa nezdeformoval */
+    .blog-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .content h1 {
+        font-size: 1.25rem; /* Menší nadpis na malom displeji */
+    }
+
+    /* Zmenšiť aj popis*/
+    .description {
+        font-size: 0.875rem;
+    }
+}
