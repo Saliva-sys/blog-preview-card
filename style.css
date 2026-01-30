@@ -38,11 +38,11 @@ body {
 
 .card {
     width: 100%;
-    max-width: 384px; /*Ak karta zaberá presne 4 stĺpce, jej šírka v CSS by mala byť: (4×72)+(3×32)=384px*/
+    max-width: 24rem; /*Ak karta zaberá presne 4 stĺpce, jej šírka v CSS by mala byť: (4×72)+(3×32)=384px*/
     background-color: var(--White);
-    border: 1px solid var(--dark-gray);
+    border: 0.0625rem solid var(--dark-gray);
     border-radius: 1.25rem; /* Zaoblenie  */
-    box-shadow: 8px 8px 0px 0px var(--black); /*8px doprava, 8px dole, 0 rozmazanie, tmavo siva farba */
+    box-shadow: 0.5rem 0.5rem 0rem 0rem var(--black); /*8px doprava, 8px dole, 0 rozmazanie, tmavo siva farba */
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -118,7 +118,7 @@ body {
 .attribution { 
     font-size: 0.6875rem; 
     text-align: center; 
-    margin-block-start: 0.9375rem;
+    margin-block-start: 0rem;
 }
 
 .attribution a { 
@@ -128,7 +128,7 @@ body {
 /* Mobile Styles (375px and below) */
 @media (max-width: 24rem) {
     .card {
-        width: calc(100% - 48px); /* Karta bude mať šírku displeja mínus malé okraje po bokoch (24px + 24x) */
+        width: calc(100% - 3rem); /* Karta bude mať šírku displeja mínus malé okraje po bokoch (24px + 24x) */
         margin: 0 auto; /* Toto kartu vycentruje vodorovne */
         padding: 1.5rem; /* Na mobile môže byť padding o niečo menší */
     }   
@@ -136,7 +136,7 @@ body {
     /* Prispôsobenie obrázka, aby sa nezdeformoval */
     .blog-image img {
         width: 100%;
-        height: 200px;
+        height: 12.5rem;
         object-fit: cover;    /* Zabezpečí, že sa obrázok pri zmene pomeru nezdeformuje */
     }
 
