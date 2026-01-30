@@ -29,12 +29,12 @@ Users should be able to:
 
 ### Screenshot
 
-[Design preview](./assets/images/screenshot.png)
+[Design preview](./assets/images/Screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Saliva-sys/blog-preview-card) 
-- Live Site URL: [Add live site URL here](https://saliva-sys.github.io/blog-preview-card/)
+- Solution URL: [GitHub Repository](https://github.com/Saliva-sys/blog-preview-card) 
+- Live Site URL: [View Live Demo](https://saliva-sys.github.io/blog-preview-card/)
 
 ## My process
 
